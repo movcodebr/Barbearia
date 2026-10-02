@@ -1,36 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esqueci a Senha - Grey Barber</title>
-    <link rel="icon" type="imagem/png" href="img/Barbearia_Logo.png">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="estilizacoes/senha.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Recuperar senha · Grey Barber</title>
+  <meta name="description" content="Redefina a senha da sua conta.">
+  <meta name="theme-color" content="#0d0c0a">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:wght@700&family=Rye&display=swap">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
+<body data-page="senha" data-title="Recuperar senha" data-whatsapp="off">
+  <header class="site-header" id="site-header"></header>
 
-<body>
-    <main class="container">
-        <form>
+  <main id="conteudo" class="auth">
+    <div class="auth-visual">
+      <span class="eyebrow">Recuperação de acesso</span>
+      <blockquote>Esqueceu a senha? Acontece. Em três passos você volta a agendar.</blockquote>
+    </div>
+    <div class="auth-main">
+      <div class="auth-card" id="reset-card"></div>
+    </div>
+  </main>
 
-            <img src="img/Barbearia_Logo.png" alt="logo" class="logo-login">
+  <footer class="site-footer" id="site-footer"></footer>
 
-            <h1>Esqueci a Senha</h1>
-
-            <p class="descricao">Digite seu e-mail e enviaremos um link para redefinir sua senha.</p>
-
-            <div class="input-box">
-                <input placeholder="E-mail" type="email" required>
-                <i class="bx bxs-envelope"></i>
-            </div>
-
-            <button type="submit" class="login">Enviar link</button>
-
-            <div class="register-link">
-                <p>Lembrou a senha? <a href="login.html">Voltar ao login</a></p>
-            </div>
-
-        </form>
-    </main>
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/seed.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/booking.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/pages/senha.js"></script>
 </body>
 </html>

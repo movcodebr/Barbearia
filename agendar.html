@@ -1,193 +1,56 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendar - Grey Barber</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="estilizacoes/agendar.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> <!--fonte icons-->
-    <link rel="icon" type="imagem/png" href="img/Barbearia_Logo.png"> <!--favicon-->
-    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Agendar horário · Grey Barber</title>
+  <meta name="description" content="Agende seu corte ou barba online: escolha o serviço, o barbeiro e um horário livre.">
+  <meta name="theme-color" content="#0d0c0a">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:wght@700&family=Rye&display=swap">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
+<body data-page="agendar" data-title="Agendar horário" data-whatsapp="off">
+  <header class="site-header" id="site-header"></header>
 
-<body>
+  <main id="conteudo">
+    <section class="page-hero compact">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Você está em">
+          <a href="index.html">Início</a><span aria-hidden="true">/</span><span>Agendar</span>
+        </nav>
+        <h1>Agendar horário</h1>
+      </div>
+    </section>
 
-
-    <input type="checkbox" id="toggle-menu">
-
-<div class="sidebar">
-    <label for="toggle-menu" class="btn-fechar">✕</label>
-    <nav class="sidebar-nav">
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a class="ativo">Agendamento</a></li>
-            <li><a href="servicos.html">Serviços</a></li>
-            <li><a href="contato.html">Contato</a></li>
-            <li><a href="login.html"><i class="bi bi-person-circle"></i> Entrar</a></li> <!--simulando que a pessoa nao entrou-->
-        </ul>
-    </nav>
-</div>
-
-
-<header class="header">
-
-    <div class="container-logo">
-        <img src="img/Barbearia_Logo.png" alt="logo">
-        <h1>Grey Barber</h1>
+    <div class="container booking">
+      <div class="wizard" id="wizard">
+        <div class="wizard-progress">
+          <ol class="wizard-steps" id="wizard-steps"></ol>
+          <div class="progress-track" aria-hidden="true"><div class="pole animated" id="wizard-bar"></div></div>
+        </div>
+        <div class="wizard-panel" id="wizard-panel"></div>
+      </div>
+      <aside class="summary" id="summary" aria-label="Resumo do agendamento"></aside>
     </div>
 
-     <label for="toggle-menu" class="hamburguer">
-        <i class="bi bi-list"></i>
-    </label>
-    
-    <nav class="menu">
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a class="ativo" href="">Agendamento</a></li>
-            <li><a href="servicos.html">Serviços</a></li>
-            <li><a href="contato.html">Contato</a></li>
-            <li><a href="login.html"><i class="bi bi-person-circle"></i> Entrar</a></li> <!--simulando que a pessoa nao entrou-->
-        </ul>
-    </nav>
-</header>
+    <div class="mobile-bar" id="mobile-bar" hidden></div>
+  </main>
 
-<!--PRINCIPAL-->
-<section class="agendamento">
-    <div class="titulo-agendamento">
-        <h2>AGENDAR HORÁRIO</h2>
-        <p>AGENDE SEU ATENDIMENTO EM POUCOS PASSOS</p>
-    </div>
+  <footer class="site-footer" id="site-footer"></footer>
 
-    <div class="box-agendamento">
-        <div class="etapa">
-            <div class="numero">1</div>
-            <h3>ESCOLHA O SERVIÇO</h3>
-        </div>
-
-        <div class="servico">
-            <div class="info-servico">
-                <h4>CORTE</h4>
-                <p>Corte moderno com acabamento profissional.</p>
-                <span>Tempo estimado: 45-50 min</span>
-                <span>Valor: R$ 40,00</span>
-            </div>
-            <button>Selecionar</button>
-        </div>
-
-        <div class="servico">
-            <div class="info-servico">
-                <h4>BARBA</h4>
-                <p>Modelagem completa com hidratação.</p>
-                <span>Tempo estimado: 30-35 min</span>
-                <span>Valor: R$ 30,00</span>
-            </div>
-            <button>Selecionar</button>
-        </div>
-
-        <div class="servico">
-            <div class="info-servico">
-                <h4>COMBO</h4>
-                <p>Pacote completo com desconto.</p>
-                <span>Tempo estimado: 75-80 min</span>
-                <span>Valor: R$ 60,00</span>
-            </div>
-            <button>Selecionar</button>
-        </div>
-
-        <div class="servico">
-            <div class="info-servico">
-                <h4>LUZES</h4>
-                <p>Visual moderno com estilo e personalidade.</p>
-                <span>Tempo estimado: 60-65 min</span>
-                <span>Valor: R$ 80,00</span>
-            </div>
-            <button>Selecionar</button>
-        </div>
-        
-        <div class="servico">
-            <div class="info-servico">
-                <h4>SOBRANCELHA</h4>
-                <p>Design e alinhamento profissional.</p>
-                <span>Tempo estimado: 20-25 min</span>
-                <span>Valor: R$ 20,00</span>
-            </div>
-            <button>Selecionar</button>
-        </div>
-
-        <div class="servico">
-            <div class="info-servico">
-                <h4>BIGODE</h4>
-                <p>Acabamento detalhado e alinhamento perfeito.</p>
-                <span>Tempo estimado: 15-20 min</span>
-                <span>Valor: R$ 20,00</span>
-            </div>
-            <button>Selecionar</button>
-        </div>
-
-        <!--DATA E HORARIO-->
-        <div class="etapa">
-            <div class="numero">2</div>
-            <h3>ESCOLHA A DATA E HORÁRIO</h3>
-        </div>
-
-        <div class="inputs">
-            <input type="date">
-            <input type="time">
-        </div>
-
-        <!--BARBEIROS-->
-        <div class="etapa">
-            <div class="numero">3</div>
-            <h3>ESCOLHA O PROFISSIONAL</h3>
-        </div>
-
-        <div class="barbeiros">
-            <div class="barbeiro">
-            <div class="foto-barbeiro">ZÉ</div>
-
-        <div class="info-barbeiro">
-            <h4>Zé</h4>
-            <p>Especialista em cortes clássicos e barba.</p>
-        </div>
-        <button>Selecionar</button>
-         </div>
-
-        <div class="barbeiro">
-            <div class="foto-barbeiro">RO</div>
-            <div class="info-barbeiro">
-            <h4>Rodrigo</h4>
-            <p>Expert em degradê e luzes.</p>
-        </div>
-        <button>Selecionar</button>
-        </div>
-
-        <div class="barbeiro">
-        <div class="foto-barbeiro">MA</div>
-        <div class="info-barbeiro">
-            <h4>Mateus</h4>
-            <p>Especialista em sobrancelha e acabamentos.</p>
-        </div>
-            <button>Selecionar</button>
-        </div>
-        </div>
-
-        <!--BOTAO DE CONFIRMACAO-->
-        <button class="btn-confirmar">
-            CONFIRMAR AGENDAMENTO
-        </button>
-
-        <P>ACESSE SUA CONTA PARA GARANTIR SEU HORARIO</P>
-       
-        <div class="entrar">
-                <a href="login.html">Entrar</a>
-    </div>
-
-</section>
-
-    <footer>
-        <p>© 2026 Grey Barber - Todos os direitos reservados.</p>
-    </footer>   
-
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/seed.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/booking.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/pages/agendar.js"></script>
 </body>
 </html>
