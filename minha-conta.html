@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meus agendamentos — Grey Barber</title>
+  <meta name="description" content="Acompanhe, remarque e cancele seus horários na Grey Barber.">
+  <meta name="theme-color" content="#0b0b0c">
+  <meta property="og:title" content="Meus agendamentos — Grey Barber">
+  <meta property="og:description" content="Acompanhe, remarque e cancele seus horários na Grey Barber.">
+  <meta property="og:image" content="img/barbearia-800.webp">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500;600;700&family=Rye&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="estilizacoes/base.css">
+  <link rel="stylesheet" href="estilizacoes/paginas.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/util.js" defer></script>
+  <script src="js/banco-demo.js" defer></script>
+  <script src="js/banco-supabase.js" defer></script>
+  <script src="js/layout.js" defer></script>
+  <script src="js/remarcar.js" defer></script>
+  <script src="js/paginas/conta.js" defer></script>
+</head>
+<body data-pagina="conta">
+  <div id="topo"></div>
+  <main id="conteudo">
+    <section class="container pagina-topo conta-topo">
+      <div>
+        <span class="sobretitulo">Minha conta</span>
+        <h1 class="titulo-secao" id="ola">Olá!</h1>
+      </div>
+      <a href="agendar.html" class="btn btn-primario"><i class="bi bi-calendar-plus" aria-hidden="true"></i> Novo agendamento</a>
+    </section>
+
+    <div class="container conta-grade">
+      <div class="conta-principal">
+        <section aria-labelledby="t-proximos">
+          <h2 class="subtitulo" id="t-proximos">Próximos horários</h2>
+          <div id="proximos" class="lista-ag"><div class="esqueleto"></div></div>
+        </section>
+        <section aria-labelledby="t-historico">
+          <h2 class="subtitulo" id="t-historico">Histórico</h2>
+          <div id="historico" class="lista-ag"></div>
+        </section>
+      </div>
+
+      <aside>
+        <form class="cartao form-perfil" id="form-perfil" novalidate>
+          <h2 class="subtitulo">Meus dados</h2>
+          <div class="campo">
+            <label for="p-nome">Nome</label>
+            <input id="p-nome" class="entrada" required minlength="2" maxlength="120" autocomplete="name">
+          </div>
+          <div class="campo">
+            <label for="p-tel">Celular / WhatsApp</label>
+            <input id="p-tel" class="entrada" type="tel" inputmode="numeric" autocomplete="tel-national">
+          </div>
+          <div class="campo">
+            <label for="p-email">E-mail</label>
+            <input id="p-email" class="entrada" disabled>
+          </div>
+          <button type="submit" class="btn btn-contorno btn-bloco">Salvar alterações</button>
+        </form>
+      </aside>
+    </div>
+  </main>
+  <div id="rodape"></div>
+</body>
+</html>
